@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: greeter
-          image: example.com/tekton-tutorial-helloworld
+          image: example.com/tekton-tutorial/helloworld
           resources:
             limits:
               memory: '500m'

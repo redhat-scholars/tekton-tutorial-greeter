@@ -1,22 +1,23 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: greeter
 spec:
   selector:
-    matchLabels:
+    # to avoid missing label selectors use YAML aliases
+    matchLabels: &labels
       app: greeter
   template:
     metadata:
-      labels:
-        app: greeter
+      labels: *labels
     spec:
       containers:
         - name: greeter
-          image: example.com/tekton-tutorial/greeter
+          image: example.com/rhdevelopers/tekton-tutorial-greeter
           resources:
             limits:
-              memory: "500m"
-              cpu: "1"
+              memory: "750Mi"
+              cpu: "500m"
           ports:
             - containerPort: 8080

@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: greeter
 spec:
   selector:
     matchLabels:
-      app: helloworld
+      app: greeter
   template:
     metadata:
       labels:
-        app: helloworld
+        app: greeter
     spec:
       containers:
         - name: greeter
-          image: example.com/tekton-tutorial/helloworld
+          image: example.com/tekton-tutorial/greeter
           resources:
             limits:
-              memory: '500m'
-              cpu: '1'
+              memory: "500m"
+              cpu: "1"
           ports:
             - containerPort: 8080

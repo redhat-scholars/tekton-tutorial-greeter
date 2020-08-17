@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloworld
+  name: greeter
 spec:
   selector:
-    app: helloworld
+    app: greeter
   ports:
     - port: 8080
       targetPort: 8080

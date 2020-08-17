@@ -2,7 +2,7 @@
 
 Project used as part of [Tekton Tutorial](https://dn.dev/tekton-tutorial) execersies.
 
-The application has one simple REST api at URI `/` that says "😺 Tekton Rocks!! 🚀".
+The application has one simple REST api at URI `/` that says "Meeow from Tekton 😺 !! 🚀".
 
 ## Quarkus
 

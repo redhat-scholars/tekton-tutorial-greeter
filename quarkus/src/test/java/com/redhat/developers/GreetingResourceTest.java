@@ -11,7 +11,7 @@ public class GreetingResourceTest {
 
   @Test
   public void testHelloEndpoint() {
-    given().when().get("/").then().statusCode(200).body(is("Meeow!! from Tekton 😺🚀"));
+    given().when().get("/").then().statusCode(200).body(is("Tekton 😺 rocks 🚀"));
   }
 
 }

@@ -3,18 +3,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: greeter
+  labels:  &labels
+    app: greeter
 spec:
   selector:
     # to avoid missing label selectors use YAML aliases
-    matchLabels: &labels
-      app: greeter
+    matchLabels: *labels
   template:
     metadata:
       labels: *labels
     spec:
       containers:
         - name: greeter
-          image: example.com/rhdevelopers/tekton-tutorial-greeter
+          image: registry.local:5000/rhdevelopers/tekton-tutorial-greeter
+          # Uncomment below for OpenShift
+          # image: image-registry.openshift-image-registry.svc:5000/tektontutorial/greeter
           resources:
             limits:
               memory: "750Mi"

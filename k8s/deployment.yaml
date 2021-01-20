@@ -3,11 +3,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: greeter
+  labels: &labels
+    app: greeter
 spec:
   selector:
     # to avoid missing label selectors use YAML aliases
-    matchLabels: &labels
-      app: greeter
+    matchLabels: *labels
   template:
     metadata:
       labels: *labels

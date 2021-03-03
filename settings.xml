@@ -5,7 +5,7 @@
     <mirror>
       <id>central</id>
       <name>central</name>
-      <url>http://nexus:8081/repository/maven-public/</url>
+      <url>http://nexus.infra:8081/nexus/content/groups/public/</url>
       <mirrorOf>*</mirrorOf>
     </mirror>
   </mirrors>

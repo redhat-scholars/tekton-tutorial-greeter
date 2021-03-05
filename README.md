@@ -13,7 +13,6 @@ The application has one simple REST api at URI `/` that says "Meeow from Tekton 
 ```shell
 ./mvnw clean package -pl quarkus
 ```
-
 ### Running locally
 
 ```shell

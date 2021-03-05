@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: greeter
-          image: example.com/rhdevelopers/tekton-tutorial-greeter
+          image: image-registry.openshift-image-registry.svc:5000/kubesummit-demos/greeter
           resources:
             limits:
               memory: "750Mi"

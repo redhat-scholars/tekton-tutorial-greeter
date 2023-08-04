@@ -8,6 +8,6 @@ public class GreeterController {
 
   @RequestMapping("/")
   public String hello() {
-    return "Meeow!! from Tekton 😺🚀";
+    return "HHUE - Meeow!! from Tekton 😺🚀";
   }
 }

@@ -1,4 +1,4 @@
-# Tekton Greeter
+# Tekton Greeter - Pruebas de webhook
 
 Project used as part of [Tekton Tutorial](https://dn.dev/tekton-tutorial) execersies.
 

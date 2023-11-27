@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: greeter
-          image: {{ image }}
+          image: {{ .Values.image }}
           resources:
             limits:
               memory: "750Mi"

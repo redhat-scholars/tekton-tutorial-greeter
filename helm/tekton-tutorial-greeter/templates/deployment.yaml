@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greeter
+  labels:
+    app: greeter
+  annotation:
+    last-deployment-timestamp: {{ now | unixEpoch }}
+spec:
+  selector:
+    # to avoid missing label selectors use YAML aliases
+    matchLabels:
+      app: greeter
+  template:
+    metadata:
+      labels:
+        app: greeter
+    spec:
+      containers:
+        - name: greeter
+          image: {{ image }}
+          resources:
+            limits:
+              memory: "750Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080

@@ -5,8 +5,6 @@ metadata:
   name: greeter
   labels:
     app: greeter
-  annotation:
-    last-deployment-timestamp: {{ now | unixEpoch }}
 spec:
   selector:
     # to avoid missing label selectors use YAML aliases
@@ -16,6 +14,8 @@ spec:
     metadata:
       labels:
         app: greeter
+      annotations:
+        last-deployment-timestamp: {{ now | unixEpoch | quote }}
     spec:
       containers:
         - name: greeter

@@ -5,6 +5,7 @@ items:
   metadata:
     labels:
       app: greeter
+      branch: develop
     name: greeter
     namespace: {{ .Release.Namespace }}
   spec:

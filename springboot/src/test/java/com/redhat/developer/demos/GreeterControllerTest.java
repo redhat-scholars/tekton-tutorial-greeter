@@ -24,6 +24,6 @@ public class GreeterControllerTest {
   @Test
   public void greetingShouldReturnDefaultMessage() throws Exception {
     assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/", String.class))
-        .contains("HHUE-DEV - Meeow!! from Tekton 😺🚀");
+        .contains("HHUE-DEV-2 - Meeow!! from Tekton 😺🚀");
   }
 }

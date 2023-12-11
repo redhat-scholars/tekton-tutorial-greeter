@@ -8,7 +8,7 @@ items:
     name: greeter
     namespace: {{ .Release.Namespace }}
   spec:
-    host: {{ .Release.Namespace }}.apps.epyc.cloud1.2i.at
+    host: {{ .Release.Namespace }}.{{ appSuffix}}
     port:
       targetPort: 8080
     to:

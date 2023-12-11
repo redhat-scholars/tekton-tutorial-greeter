@@ -3,3 +3,4 @@
 # Declare variables to be passed into your templates.
 
 image: <to-be-set-at-helm-install>
+appSuffix: apps.epyc.cloud1.2i.at
